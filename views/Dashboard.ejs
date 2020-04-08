@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<head>
+<title>Dashboard</title>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="Dashboard.css">
+  
+<style>
+body
+{
+    background-color:ghostwhite;
+    color:black;
+    font-family:century gothic;
+    font-size:20px;
+    overflow-x : hidden;
+    outline: none;
+}
+a
+{
+    text-decoration: none;
+    color:black;
+    outline:none;
+}
+
+.headertab
+{
+    background-image:linear-gradient(to right,teal,darkslategray,black);
+    color:white;
+    height:100px;
+    width:100%;
+    font-family: century gothic;
+    transform:translate(0px,0px);
+     position: -webkit-sticky;
+  position: sticky;
+}
+
+.header
+{
+    font-family:league gothic;
+    font-size:30px;
+    color:white;
+    transform: translate(455px,-57px);
+}
+
+.smallheader
+{
+    font-family:agency fb;
+    font-size:25px;
+    color:white;
+    transform: translate(600px,-50px);  
+}
+
+.logo
+{
+    width:70px;
+    height: :70px;
+    border-radius: 50%;
+    transform:translate(20px,15px);
+}
+
+.tab
+{
+    background-color:whitesmoke;
+    height:550px;
+    width:20%;
+    float:left;
+      position: -webkit-sticky;
+  position: sticky;
+}
+
+.avatar
+{
+    width:200px;
+    height: :200px;
+    border-radius: 50%;
+    transform:translate(27px,27px);
+    opacity:0.9;    
+}
+
+.tabtext
+{
+    font-family:Agency fb;
+    font-size:27px;
+    padding:20px 10px;
+    color:black;
+    opacity:1;
+    line-height: 40px;
+}
+
+.intab
+{
+    background-color:lightgray;
+    opacity: 0.5;
+    width:100%;
+    height:200px;
+    transform: translate(0px,50px);
+}
+
+.student
+{
+    background-color:lightgray;
+    font-size:27px;
+    font-family:league gothic;
+    opacity: 0.5;
+    width:100%;
+    height:50px;
+    transform: translate(0px,0px);
+    text-align: center;
+    padding-top: 15px;
+    border-right: 3px solid black;
+}
+
+.dashboard
+{
+    width: 80%;
+    height: 50px;
+    transform: translate(270px,0px);
+    background-image: linear-gradient(to right,lightsteelblue,gainsboro);
+    opacity: 0.5;
+    text-align: center;
+    padding-top: 15px;
+    font-family:league gothic;
+    font-size: 27px;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.4);
+
+}
+
+.dash
+{
+    transform: translate(-250px,5px);
+    font-family: league gothic;
+    font-size: 27px;
+    color: black;
+    width:70px;
+    float:left;
+}
+
+.home
+{
+    transform: translate(590px,5px);
+    font-size: 20px;
+    width:60px;
+    float:left;
+}
+
+.off
+{
+    transform:translate(590px,5px);
+    font-size: 20px;
+    width:80px;
+    float:left;
+}
+
+.dashboard .home:hover
+{
+    color:forestgreen;
+    cursor: pointer;
+}
+
+.dashboard .off:hover
+{
+    color:brown;
+    cursor: pointer;
+}
+
+.tiles
+{
+    float:left;
+    width:180px;
+    height:100px;
+    background-color:lightgrey;
+    margin:30px;
+    margin-bottom:5px;
+    font-size:35px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.1);
+    padding-top:15px;
+    padding-left:10px;
+    outline: none;
+}
+
+.btiles
+{
+    float:left;
+    width:200px;
+    height:115px;
+    background-color:lightgrey;
+    margin:30px;
+    margin-bottom: 5px;
+    font-size:35px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.1);
+    padding-top:0px;
+    padding-left:10px;
+    border:none;
+    outline:none;
+}
+
+.tiletxt
+{
+    font-family: league gothic;
+    color:white;
+    font-size:30px;
+    transform: translate(-5px,9px);
+}
+
+.btiletxt
+{
+    font-family: league gothic;
+    color:white;
+    font-size:30px;
+    transform: translate(-5px,9px);
+}
+
+.tiles:hover
+{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.btiles:hover
+{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.selectcard
+{
+    background-color:black;
+    color: white;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    padding:30px; 
+    transform: translate(500px,50px);
+    box-shadow: 0 4px 8px 0 rgba(white,0.5);
+    border-radius: 10%;
+    opacity: 0.9;
+    position: absolute;
+}
+
+.cardtext
+{
+    font-family: league gothic;
+    font-size: 40px;
+    text-align: center;
+    transform: translate();
+}
+
+.textsmall
+{
+    font-family: agency FB;
+    font-size: 20px;
+    text-align: center;
+    transform: translate();
+    
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1;
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4);
+}
+
+input[type=text],select {
+  width: 50%;
+  background-color:black;
+  opacity: 0.9;
+  color: gainsboro;
+  padding:12px 20px;
+  text-align: center;
+  margin: 8px 0;
+  display: inline-block;
+  border-bottom-color: gainsboro;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  box-sizing: border-box;
+  
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color:darkslategray;
+    transform: translate(0px,35px);
+  color: white;
+  padding:14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+outline: none;
+}
+
+input[type=submit]:hover {
+  background-color: darkslategray;
+    opacity: 0.9;
+    color: black;
+    font-weight: bold;
+}
+
+.notifcont
+{
+    height:150px;
+    width:70%;
+    background-color:none;
+    border-radius:2%;
+    margin:10px;
+    padding:10px;
+    transform: translate(10px,50px);
+    text-align:left;
+    float: left;
+}
+
+.notifhead
+{
+    font-family:league gothic;
+    color:darkslategrey;
+    font-size:32px;
+}
+
+hr {
+    background-image: linear-gradient(90deg,darkslategrey,lightgrey,whitesmoke);
+    border: 0;
+    height: 3px;
+}
+
+ul
+{
+    font-family:agency fb;
+    line-height:40px;
+    font-size:23px;
+    background-color:none;
+    text-align: left;
+}
+
+.marquee {
+ height:150px;	
+ width:100%;
+ overflow: hidden;
+ position: relative;
+ background-color:none;
+ color:black;
+}
+
+.move
+{
+ position: absolute;
+ width: 100%;
+ height:40%;
+ font-family:agency fb;
+ font-size:25px;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;	
+ transform:translateY();
+ animation: scroll-top 7s linear infinite;
+}
+@keyframes scroll-top {
+ 0%   { 
+ transform: translateY(100%); 		
+ }
+ 100% { 
+ transform: translateY(-100%); 
+ }
+}
+    
+</style>
+<body>
+    
+    <div class="headertab">
+        <img src=",tempPic.jpg" class="logo">
+        <div class="header">College of Engineering and Technology, Bhubaneswar</div>
+        <div class="smallheader">Student Portal</div>
+    </div>
+    
+    
+    <div class="tab">
+        <div class="student">Student Details</div>
+        <img src="av1.png" class="avatar">
+        <div class="intab">
+        <div class="tabtext">
+            
+        Name : <%= name %> <br>
+        Email: <%= email %><br>
+        Regestration No: <%= regesterno %><br>
+        </div>
+        </div>
+    </div>
+    
+    
+    <div class="dashboard">
+        <div class="dash">Dashboard</div>
+        <div class="home"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;Home</div>
+        <div class="off"><i class="fa fa-power-off" aria-hidden="true"></i>&nbsp;
+            <!-- Logout -->
+            <form action="/logout?_method=DELETE" method="POST">
+                <button type="submit">Log Out</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    
+        <a href="table.html">
+            <div class="tiles">
+            <i class="fas fa-file-signature"></i>
+            <div class="tiletxt">Attendence</div>
+            </div>
+        </a>
+    
+        <button id="myBtn" class="btiles">
+        <i class="fas fa-poll-h"></i>
+        <div class="btiletxt" >Result</div>
+        </button>
+    
+        <div id="myModal" class="modal">
+
+            <div class="selectcard">
+            <div class="cardtext">Result </div>
+            <div class="textsmall">Select the appropriate details here to view your result</div><br><br>
+                <form>
+                    <label for="Semester">Semester  :</label>
+                    <select id="Semester" name="Semester">
+                        <option selected disabled>Select Sem</option>
+                        <option value="1st Sem-Internal">1st Sem-Internal</option>
+                        <option value="1st Sem-Semester ">1st Sem-Semester</option>
+                        <option value="2nd Sem-Internal">2nd Sem-Internal</option>
+                        <option value="2nd Sem-Semester">2nd Sem-Semester</option>
+                    </select>
+  
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+        </div> 
+    <script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+    
+    <a href="clearance.html">
+        <div class="tiles">
+        <i class="fas fa-file-invoice-dollar"></i>
+        <div class="tiletxt">Clearance</div>
+        </div>
+    </a>
+    
+    <a href="planmay.html">
+    <div class="tiles">
+        <i class="fas fa-calendar-alt"></i>
+        <div class="tiletxt">Planner</div>
+    </div>
+    </a>
+    
+    <div class="notifcont">
+        <div class="notifhead">Notification:</div>
+        <hr>
+    <div class="marquee">
+    <div class="move">
+     <ul style="list-style-type:square;">
+        <li>Semester results are out.Check it now here.</li>
+        <li>Last date for semester registration is 5th June,2019</li>
+        <li>Back paper results are out.Check results here.</li>
+        </ul>
+    </div>
+</div>
+   </div>
+    
+    
+    
+    
+</body>
+</head>
+</html>

@@ -1,0 +1,231 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CET student portal</title>
+<!--<link href="logn.css" rel="stylesheet" type="text/css" />-->
+<style>
+   
+ @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";   
+body
+{
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #fff;
+    background: url(Background.png);no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    background-size: cover;
+    overflow-x:hidden;
+}
+.signin
+{
+    background-color: black;
+    border: 2px solid gainsboro;
+    border-radius:2%;
+    opacity:0.7;
+    padding:30px 10px;
+    width: 350px;
+    margin: auto;
+    margin-top: 70px;
+    height:430px;
+    margin-left: 180x;
+    transform: translate(10px,-50px);
+}
+.image
+{
+    width:110px;
+    height:110px;
+    border-radius: 50%;
+    transform:translate(300px,10px);
+}
+
+.header
+{
+    font-family:potra;
+    font-size:55px;
+    color:white;
+    transform: translate(430px,-100px);
+    position: absolute;
+}
+
+.smallheader
+{
+    font-family:Agency FB;
+    font-size:30px;
+    color:white;
+    transform: translate(450px,-30px);  
+}
+
+form
+{
+    width: 250px;
+    text-align: center;
+    transform: translate(0px,10px);
+}
+
+input
+{
+    width: 250px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    font-family: century gothic;
+    font-size: 20px;
+    font-weight: 50px;
+    padding: 20px 0;
+    transition: border 0.5s;
+    outline: none;
+    color: white;
+    transform: translate(50px,-40px);
+}
+.logtext
+{
+    font-family:ostrich sans;
+    font-size:55px;
+    color:white;
+    transform:translate(45px,-25px);
+}
+
+input[type=submit]
+{
+    border: none;
+    text-align:center;
+    width: 120px;
+    height:40px;
+    opacity:0.9;
+    background:black;
+    color:#0A909F;
+    font-family: century gothic;
+    font-size:20px;
+    transform: translate(40px,-20px);
+    line-height: 25px;
+    padding: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type=submit]:hover
+{
+    color: black;
+    background-color:coral;
+}
+a
+{
+    color: darkcyan;
+    text-decoration: blink;
+    text-align: center;
+    font-size: 18px;
+}
+a:hover
+{
+    color: skyblue;
+}
+.container
+{
+   
+}
+::placeholder {
+    color:aliceblue;
+    opacity: 0.5; /* Firefox */
+}
+
+input[type=checkbox]
+{
+    transform:translate(-80px,20px);
+}
+
+.show
+{
+    transform:translate(50px,-45px);
+    font-family:century gothic;
+}
+
+.reset
+{
+    transform:translate(-50px,-15px);
+}
+
+.forgot
+{
+    transform: translate(150px,-38px);
+}
+.signup{
+    transform: translate(55px,-35px);
+}
+
+hr {
+    background-color: gainsboro;
+    border: 0;
+    height:1px;
+    width:15%;
+    transform: translate(10px,-20px);
+} 
+</style>
+    
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+</head>
+
+
+<body>
+    <img src="tempPic.jpg" class="image">
+    
+    <div class="header">
+        CET Student Portal
+    </div>
+    <div class="smallheader">
+        College of Engineering and Technology,Bhubhaneswar
+    </div><hr>
+   <div class="signin">
+
+    
+   
+    <% if(messages.error) { %>
+        <%= messages.error %>
+        <% } %>
+ 
+<form action = "/login" method="POST">
+  
+    <div class="logtext">Log In</div><br>
+  
+    <input type="email" name="email" id="email" placeholder="Email" required /><br /><br />
+    <input type="password" name="password"  id="pass" placeholder="Password" id="pass" required /><br /><br /> 
+
+    <div class="show">
+        <input type="checkbox" onclick="myFunction()">Show password
+    </div>
+
+    <input type="submit" value="Log In" /><br /><br />
+    <div class="reset">
+        <a href="re.html">Reset password?</a>
+        </div>
+        <div class="forgot">
+        <a href="for.html">Forgot password?</a>
+    </div>
+        <br>
+        <div class="signup">
+         Don't have account?<a href="/register">  Sign Up</a>
+        </div>
+
+</form>
+</div>
+
+</body>
+</html>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

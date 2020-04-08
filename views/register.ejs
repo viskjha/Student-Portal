@@ -1,0 +1,153 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="sgnup.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+    <style>
+        
+      body
+{
+    font-family: century gothic;
+color: #fff;
+    background: url(Background.png);
+    background-size: cover;
+}
+.signup
+{
+    background:black;
+    padding:40px;
+    width:250px;
+    margin:auto;
+    margin-top:80px;
+    height:450px;
+    margin-left:180px;
+    margin:0 auto;
+    margin-top:90px;
+    opacity:0.7;
+    border:1px solid white;
+    transform: translate(0px,30px);
+}
+form
+{
+    width: 240px;
+    text-align: center;
+    
+}
+input
+{
+    text-align:center;
+    width: 210px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    font-family: century gothic;
+    font-size: 16px;
+    font-weight: 200px;
+    padding: 10px 0;
+    transition: border 0.5s;
+    outline: none;
+color: #fff;
+}
+input[type=submit]
+{
+    border: none;
+    width: 150px;
+    background: white;
+color: #000;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+input[type=button]:hover
+{
+color: #fff;
+    background-color: coral;
+    
+}
+h2
+{
+color: #000;
+
+}
+::placeholder {
+color:aliceblue;
+    opacity: 0.8;
+}
+
+.head
+{
+    font-family:ostrich sans;
+    font-size:50px;
+    
+}
+
+        
+    #msg {
+    visibility: hidden;
+    min-width: 250px;
+    font-family: league gothic;
+    background-color:gainsboro;
+    color: #000;
+    text-align: center;
+    border-radius:10px;
+    opacity:0.9;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 30%;
+    top: 30px;
+    font-size: 20px;
+    margin-right:30px;
+    transform: translate(110px,-100px);
+}
+
+#msg.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;} 
+    to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;} 
+    to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
+    </style>
+</head>
+
+<body>
+<div class="signup">
+   
+    <form action="/register" method="post">
+        <div class="head">Sign up</div>
+        <input type="text" name="name"  id="name" placeholder="name" required><br><br>
+        <input type="email" name="email"  id="email" placeholder="email" required><br><br>   
+        <input type="regesterno" name="regesterno"  id="regesterno" placeholder="Regestration No" required><br><br>    
+        <input type="password" name="password" id="password" placeholder="Password" required/><br><br>    
+        <input type="password" name="pasword"  id="password2" placeholder="Confirm Password"><br><br>   
+        <input type="submit" value="Sign up"><br><br>
+
+        <div id="msg">Signed up!</div>
+
+        Already have account?<a href="/login" style="text-decoration: none; font-family: 'Play', sans-serif; color: yellow;">&nbsp;Log In</a>
+    </form>
+</div>
+</body>
+</html>
